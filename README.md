@@ -9,5 +9,5 @@ Check it out on CodePen:
 [https://codepen.io/nelsyeung/full/ejjYwE/](https://codepen.io/nelsyeung/full/ejjYwE/)
 
 ![WebGL Laplace
-Solver](https://raw.githubusercontent.com/nelsyeung/webgl-laplace-solver/master/screenshot.jpg
+Solver](https://raw.githubusercontent.com/nelsyeung/webgl-laplace-solver/master/screenshot.png
 "WebGL Laplace Solver")
