@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebGL Laplace Solver</title>
+</head>
+
+<body>
+  <div id="controls" class="paper">
+    <h1>WebGL Laplace Solver</h1>
+    <label>
+      <input type="radio" name="method" value="gpu" checked> GPU
+    </label>
+    <label>
+      <input type="radio" name="method" value="cpu"> CPU
+    </label>
+    <div>
+      <label for="grid">Grid points:</label>
+      <input id="grid" type="number" value="128">
+    </div>
+    <div>
+      <label for="iter">Iterations:</label>
+      <input id="iter" type="number" value="1000">
+    </div>
+    <div>
+      <select id="colors">
+        <option value="rgb" selected>RGB</option>
+        <option value="red">Red</option>
+        <option value="rgrey">Red (Greyscale)</option>
+        <option value="green">Green</option>
+        <option value="ggrey">Green (Greyscale)</option>
+        <option value="blue">Blue</option>
+        <option value="bgrey">Blue (Greyscale)</option>
+      </select>
+    </div>
+    <div>
+      <input id="start" type="button" value="Run">
+    </div>
+    <div id="message"></div>
+    <hr>
+    <p>The GPU solution is slightly different than the CPU, because the
+      initialisation is also done on the GPU on a much finer grid.<p>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #5c616c;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  width: 100vh;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 4px 0;
+}
+
+a {
+  color: #1875d1;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 9px 0;
+}
+
+input:not([type=radio]) {
+  border: 2px solid black;
+  background: white;
+  color: black;
+  border-radius: 2px;
+  margin: 7px 0;
+  height: 45px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: text;
+  user-select: text;
+  width: 100px;
+}
+
+input[type=button] {
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background: #efefef;
+}
+
+hr {
+  width: 50%;
+  border: 3px solid #5c616c;
+  background-color: #5c616c;
+  border-radius: 4px;
+}
+
+#controls {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+}
+
+.paper {
+  background-color: white;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.6);
+  line-height: 2em;
+  padding: 8px 16px;
+  width: 260px;
+  text-align: center;
+}
