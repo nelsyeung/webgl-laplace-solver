@@ -80,9 +80,10 @@ hr {
 
 .paper {
   background-color: white;
+  border-radius: 3px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.6);
   line-height: 2em;
   padding: 8px 16px;
-  width: 260px;
   text-align: center;
+  width: 260px;
 }
