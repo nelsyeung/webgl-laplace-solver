@@ -325,8 +325,14 @@ function cpu(gl, programsInfo, buffersInfo, grid, iter) {
 function main(gl) {
   const colors = $colors.options[$colors.selectedIndex].value;
   const method = document.querySelector('input[name="method"]:checked').value;
-  const grid = parseInt($grid.value, 10);
   const iter = parseInt($iter.value, 10);
+  let grid = parseInt($grid.value, 10);
+
+  if (grid > gl.canvas.height) {
+    grid = gl.canvas.height;
+    $grid.value = grid;
+  }
+
   const vsSrc = `#version 300 es
     in vec4 aPosition;
     in vec2 aTexCoord;
