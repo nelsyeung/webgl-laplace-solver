@@ -327,27 +327,12 @@ function main(gl) {
   const method = document.querySelector('input[name="method"]:checked').value;
   const iter = parseInt($iter.value, 10);
   let grid = parseInt($grid.value, 10);
+  let colorStr;
 
   if (grid > gl.canvas.height) {
     grid = gl.canvas.height;
     $grid.value = grid;
   }
-
-  const vsSrc = `#version 300 es
-    in vec4 aPosition;
-    in vec2 aTexCoord;
-
-    out vec2 vTexCoord;
-
-    const vec4 translation = vec4(-0.5, -0.5, 0, 0);
-    const vec4 scaling = vec4(2, 2, 1, 1);
-
-    void main(void) {
-      gl_Position = (aPosition + translation) * scaling;
-      vTexCoord = aTexCoord;
-    }
-  `;
-  let colorStr;
 
   if (colors === 'rgb') {
     colorStr = 'color.r, color.g, color.b';
@@ -364,6 +349,21 @@ function main(gl) {
   } else if (colors === 'bgrey') {
     colorStr = 'color.b, color.b, color.b';
   }
+
+  const vsSrc = `#version 300 es
+    in vec4 aPosition;
+    in vec2 aTexCoord;
+
+    out vec2 vTexCoord;
+
+    const vec4 translation = vec4(-0.5, -0.5, 0, 0);
+    const vec4 scaling = vec4(2, 2, 1, 1);
+
+    void main(void) {
+      gl_Position = (aPosition + translation) * scaling;
+      vTexCoord = aTexCoord;
+    }
+  `;
 
   const fsInitSrc = `#version 300 es
     precision highp float;
