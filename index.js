@@ -344,7 +344,7 @@ function main(gl) {
     colorStr = '0, color.g, 0';
   } else if (colors === 'ggrey') {
     colorStr = 'color.g, color.g, color.g';
-  } else if (colors === 'bgrey') {
+  } else if (colors === 'blue') {
     colorStr = '0, 0, color.b';
   } else if (colors === 'bgrey') {
     colorStr = 'color.b, color.b, color.b';
