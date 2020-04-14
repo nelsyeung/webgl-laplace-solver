@@ -418,7 +418,7 @@ function main(gl) {
 
         float value = ((w.r + e.r + n.r + s.r) / 4.0) +
           ((w.g + e.g + n.g + s.g) / 1020.0) +
-          ((w.b + e.b + n.b + s.r) / 260100.0);
+          ((w.b + e.b + n.b + s.b) / 260100.0);
         fragColor = vec4(floatToRGB(value), 0.0);
       } else {
         fragColor = color;
