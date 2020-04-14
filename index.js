@@ -251,7 +251,7 @@ function cpu(gl, programsInfo, buffersInfo, grid, iter) {
         data[0][i].push([0.5, 0]);
       }
 
-      data[1][i].push(data[0][i][j]);
+      data[1][i].push([...data[0][i][j]]);
     }
   }
 
