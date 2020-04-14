@@ -400,10 +400,10 @@ function main(gl) {
     out vec4 fragColor;
 
     vec3 floatToRGB(float value) {
-      const vec3 bitShifts = vec3(1.0, 255.0, 65025.0);
-      vec3 rgb = fract(bitShifts * value);
-      rgb -= rgb.yzz * vec2(1.0 / 255.0, 0.0).xxy;
-      return rgb;
+      float r = value - mod(value, 1.0 / 255.0);
+      float g = (value - r - mod(value, 1.0 / 65025.0)) * 255.0;
+      float b = (value - r - g) * 65025.0;
+      return vec3(r, g, b);
     }
 
     void main(void) {
