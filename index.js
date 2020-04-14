@@ -385,7 +385,7 @@ function main(gl) {
       } else if (dist2Sq < rSq) {
         fragColor = vec4(0.0, 0.0, 0.0, 1.0);
       } else {
-        fragColor = vec4(0.5, 0.0, 0.0, 0.0);
+        fragColor = vec4(0.5, 0.5, 0.5, 0.0);
       }
     }
   `;
